@@ -1,0 +1,26 @@
+
+{% extends 'todoApp/navbar.html' %}
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/styles.css'%}">
+    <title>Dashboard</title>
+</head>
+<body>
+    {%block content%}
+    <br>
+    <div class="container bg-white shadow-md p-5 form-layout">
+        <h1>dashboard</h1>
+        <p>Username : {{user}} </p>
+        <hr>
+        <img src="{{ProfilePicture.ProfilePicture.url}}" alt="Profile Picture" style="width: 120px; height: 105px;">
+        <br>
+        <br>
+        <a href="{%url 'my_logout'%}" class="btn btn-secondary btn-md w-100 btn-block p-4 remove-underline">Log out</a>
+    </div>
+    {%endblock%}
+</body>
+</html>

@@ -1,0 +1,35 @@
+{%load static%}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/morph/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/styles.css'%}">
+    <title>Document</title>
+</head>
+<body>
+    <br><br>
+    <div class="container bg-white shadow-md p-5 form-layout">
+        <h3>Sign in</h3>
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                <p id="message-timer" class="alert alert-success float-center text-center message-text" role="alert">{{ message }}</p>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            {{authentication_form|crispy}}
+            <br>
+            <input type="submit" value="Log in" class="btn btn-secondary btn-md w-100 btn-block p-4">
+          </form>
+          <br>
+    </div>
+
+<!---Make sure to connect the app.js with the html as below-->
+<script src="{%static 'js/app.js'%}"></script>
+</body>
+</html>
