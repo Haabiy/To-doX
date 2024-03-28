@@ -2,17 +2,29 @@
 
 This project delves into the fundamental aspects of Django framework, offering a comprehensive exploration of its core components. 
 
-1. `Django Basics:` Got into the foundational elements of Django, dissecting models, views, and templates. Established a robust architectural framework for web applications, leveraging the Model-View-Controller (MVC) pattern to segregate concerns effectively.
+1. `Django Basics:` 
 
-2. `Database Management:` Mastered database interaction with Django's built-in Object-Relational Mapping (ORM) layer. Navigated database migrations seamlessly, executed data queries proficiently, and established optimized model relationships to ensure application scalability.
+    - Get into the foundational elements of Django, dissecting models, views, and templates. Establish a robust architectural framework for web applications, leveraging the Model-View-Controller (MVC) pattern to segregate concerns effectively.
 
-3. `CRUD Operations:` Acquired proficiency in the fundamental CRUD operations (Create, Read, Update, Delete), and learned to implement them seamlessly with models and objects within Django applications.
+2. `Database Management:` 
 
-4. `Integration of Static Files:` Elevated web application quality by seamlessly integrating CSS and JavaScript files, enhancing styling and interactivity.
+    - Master database interaction with Django's built-in Object-Relational Mapping (ORM) layer. Navigate database migrations seamlessly, executed data queries proficiently, and established optimized model relationships to ensure application scalability.
 
-5. `User Registration and Authentication:` Implemented robust user authentication and authorization systems to strengthen Django applications' security posture. Learned to manage user registration, facilitate seamless login/logout functionality, and safeguard sensitive user data effectively.
+3. `CRUD Operations:` 
 
-6. `Form Handling:` Cultivated expertise in constructing and handling forms within Django applications, facilitating smooth user data input and interaction.
+    - Acquire proficiency in the fundamental CRUD operations (Create, Read, Update, Delete), and learn to implement them seamlessly with models and objects within Django applications.
+
+4. `Integration of Static Files:` 
+
+    - Elevate web application quality by seamlessly integrating CSS and JavaScript files, enhancing styling and interactivity.
+
+5. `User Registration and Authentication:` 
+
+    - Implement robust user authentication and authorization systems to strengthen Django applications' security posture. Learn to manage user registration, facilitate seamless login/logout functionality, and safeguard sensitive user data effectively.
+
+6. `Form Handling:` 
+
+    - Cultivate expertise in constructing and handling forms within Django applications, facilitating smooth user data input and interaction.
 
 ## Creating a Virtual Environment
 1. Open Terminal.
