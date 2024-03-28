@@ -1,3 +1,19 @@
+**To-doX Overview**
+
+This project delves into the fundamental aspects of Django framework, offering a comprehensive exploration of its core components. 
+
+1. `Django Basics:` Got into the foundational elements of Django, dissecting models, views, and templates. Established a robust architectural framework for web applications, leveraging the Model-View-Controller (MVC) pattern to segregate concerns effectively.
+
+2. `Database Management:` Mastered database interaction with Django's built-in Object-Relational Mapping (ORM) layer. Navigated database migrations seamlessly, executed data queries proficiently, and established optimized model relationships to ensure application scalability.
+
+3. `CRUD Operations:` Acquired proficiency in the fundamental CRUD operations (Create, Read, Update, Delete), and learned to implement them seamlessly with models and objects within Django applications.
+
+4. `Integration of Static Files:` Elevated web application quality by seamlessly integrating CSS and JavaScript files, enhancing styling and interactivity.
+
+5. `User Registration and Authentication:` Implemented robust user authentication and authorization systems to strengthen Django applications' security posture. Learned to manage user registration, facilitate seamless login/logout functionality, and safeguard sensitive user data effectively.
+
+6. `Form Handling:` Cultivated expertise in constructing and handling forms within Django applications, facilitating smooth user data input and interaction.
+
 ## Creating a Virtual Environment
 1. Open Terminal.
 
@@ -81,4 +97,35 @@
     └── views.py
 
 ```
+
+### Prerequisites
+Make sure you have Python 3.x installed on your system. If not, you can download and install it from [Python's official website](https://www.python.org/downloads/).
+
+### Steps to Run the Application
+1. **Clone the Repository:**
+   ```
+   git clone https://github.com/Haabiy/To-doX.git
+   ```
+2. **Activate the virtual environment**
+   ```
+   source myenv/bin/activate
+   ```
+3. **Install Dependencies:**
+   Before running the server, make sure to install the required dependencies. You can install them using pip:
+   ```
+   pip install -r requirements.txt
+   ```
+4. **Navigate to the Project Directory:**
+   ```
+   cd todo/
+   ```
+5. **Run the Server:**
+   Once the dependencies are installed, run the Django server using the following command:
+   ```
+   python3 manage.py runserver
+   ```
+   This command will start the Django development server.
+
+6. **Access the Application:**
+   via `http://localhost:8000` in your web browser.
 
