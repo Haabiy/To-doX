@@ -75,8 +75,8 @@ Update your `STATICFILES_STORAGE` and `DEFAULT_FILE_STORAGE` settings to use the
 STATICFILES_STORAGE = 'todoApp.s3_storage.StaticStorage'
 DEFAULT_FILE_STORAGE = 'todoApp.s3_storage.MediaStorage'
 ```
-
-**5. Configure Database Settings**
+ 
+**5. Configure Media URL**
 
 Define the media URL to point to the correct location within your S3 bucket:
 
@@ -84,7 +84,7 @@ Define the media URL to point to the correct location within your S3 bucket:
 MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/{MEDIAFILES_LOCATION}/'
 ```
 
-**6. Configure Media URL**
+**6. Configure Database Settings**
 
 If you are using `Amazon RDS` or `Amazon Redshift` for your database, configure the database settings accordingly in your Django project's settings.py. Update the `DATABASES` dictionary with your database connection details.
 
