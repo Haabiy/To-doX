@@ -120,6 +120,38 @@ DATABASES = {
     }
 }
 
+# Reference for production db
+'''DATABASES = {
+     #'default': {
+         #'ENGINE': 'django.db.backends.sqlite3',
+         #'NAME': BASE_DIR / 'db.sqlite3',
+     #},
+    'default': {
+
+        #'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        #'HOST' : os.environ.get("POSTGRES_URL", "127.0.0.1"),
+        #'PORT' : os.environ.get("POSTGRES_PORT", "5432"),
+        #'NAME': os.environ.get("POSTGRES_DB","name"),
+        #'USER' : os.environ.get("POSTGRES_USER","user"),
+        #'PASSWORD' : os.environ.get("POSTGRES_PASSWORD","password"),
+      
+         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+         'HOST' : os.environ.get("POSTGRES_URL", "host"),
+         'PORT' : os.environ.get("POSTGRES_PORT", "port"),
+         'NAME': os.environ.get("POSTGRES_DB","name"),
+         'USER' : os.environ.get("POSTGRES_USER","user"),
+         'PASSWORD' : os.environ.get("POSTGRES_PASSWORD","password"),
+    },
+    'redshift': {
+        'ENGINE': 'django_redshift_backend',
+        'HOST' : os.environ.get("POSTGRES_URL", "host"),
+        'PORT' : os.environ.get("POSTGRES_PORT", "port"),
+        'NAME': os.environ.get("POSTGRES_DB","name"),
+        'USER' : os.environ.get("POSTGRES_USER","user"),
+        'PASSWORD' : os.environ.get("POSTGRES_PASSWORD","password"),        
+    }
+}'''
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators

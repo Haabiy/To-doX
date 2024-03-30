@@ -1,4 +1,4 @@
-**Setting up Django with Amazon S3 for Static and Media Files**
+**Setting up Django with Amazon S3, Amazon RDS, and Amazon Redshift for Static and Media Files**
 
 ---
 
@@ -78,7 +78,7 @@ STATICFILES_STORAGE = 'todoApp.s3_storage.StaticStorage'
 DEFAULT_FILE_STORAGE = 'todoApp.s3_storage.MediaStorage'
 ```
 
-**5. Configure Media URL**
+**5. Configure Database Settings**
 
 Define the media URL to point to the correct location within your S3 bucket:
 
@@ -86,7 +86,11 @@ Define the media URL to point to the correct location within your S3 bucket:
 MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/{MEDIAFILES_LOCATION}/'
 ```
 
-**6. Collect Static Files**
+**6. Configure Media URL**
+
+If you are using `Amazon RDS` or `Amazon Redshift` for your database, configure the database settings accordingly in your Django project's settings.py. Update the `DATABASES` dictionary with your database connection details.
+
+**7. Collect Static Files**
 
 Finally, run the following command to collect and upload static files to your S3 bucket:
 
