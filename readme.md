@@ -141,3 +141,12 @@ Make sure you have Python 3.x installed on your system. If not, you can download
 6. **Access the Application:**
    via `http://localhost:8000` in your web browser.
 
+
+### AWS S3 Integration (AWS-cloud Branch)
+
+The AWS-cloud branch includes integration with AWS S3 for storage management. Static files and media files are stored on Amazon S3, and the project uses `django-storages` library for handling file storage on AWS S3.
+
+For detailed instructions, please refer to the README.md file in the `AWS-cloud` branch.
+
+
+
