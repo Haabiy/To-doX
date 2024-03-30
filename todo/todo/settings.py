@@ -13,7 +13,9 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 from dotenv import load_dotenv
 import os
+from storages.backends.s3boto3 import S3Boto3Storage
 load_dotenv()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -44,6 +46,34 @@ INSTALLED_APPS = [
     "crispy_bootstrap5",
     "storages",
 ]
+
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_REGION_NAME = os.getenv('AWS_S3_REGION_NAME')
+STATICFILES_LOCATION = os.getenv('STATICFILES_LOCATION')
+MEDIAFILES_LOCATION = os.getenv('MEDIA')
+
+AWS_S3_URL_PROTOCOL = 'https'
+AWS_S3_USE_SSL = True
+AWS_S3_VERIFY = True
+AWS_S3_FILE_OVERWRITE = False
+
+STATICFILES_STORAGE = 'todoApp.s3_storage.StaticStorage'
+DEFAULT_FILE_STORAGE = 'todoApp.s3_storage.MediaStorage'
+
+'''STORAGES = {
+    # media file management(images)
+    "default":{
+        "BACKEND" : "storages.backends.s3boto3.S3Boto3Storage"
+    },
+    # CSS AND JS file management
+    "staticfiles":{
+        "BACKEND" : "storages.backends.s3boto3.S3Boto3Storage"
+    },
+}'''
+
+MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/{MEDIAFILES_LOCATION}/'
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
@@ -131,7 +161,8 @@ MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / "media"
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / "static",]
+# this is a local directory since s3 is set, we no longer need it.
+#STATICFILES_DIRS = [BASE_DIR / "static",] 
 
 
 # Default primary key field type

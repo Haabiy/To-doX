@@ -1,5 +1,8 @@
 from django.db import models
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 # Create your models here.
 from django.contrib.auth.models import User
 
@@ -18,6 +21,7 @@ class todo(models.Model):
     
 
 class Profile(models.Model):
+    # NB: There is an option known as upload_to, upload_to = 'media'
     ProfilePicture = models.ImageField(null=True, blank=True, default='Default.png') # http://127.0.0.1:8000/admin/todoApp/profile/
     user = models.ForeignKey(User, max_length = 10, on_delete = models.CASCADE, null=True)
 
