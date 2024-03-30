@@ -1,6 +1,4 @@
-**Setting up Django with Amazon S3, Amazon RDS, and Amazon Redshift for Static and Media Files**
-
----
+## Setting up Django with Amazon S3, Amazon RDS, and Amazon Redshift
 
 **1. Install Required Packages**
 
