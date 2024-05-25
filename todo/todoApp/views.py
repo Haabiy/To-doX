@@ -52,7 +52,9 @@ def register(request):
             subject = 'Welcome to TodoX'
             message = 'Welcome to TodoX! We hope you enjoy using our app.'
             #html_message = render_to_string('todoApp/welcome.html', {'recipient_name': {user.username}})
-            send_mail(subject, message, settings.EMAIL_HOST_USER, [user.email])
+            
+            # Please follow the steps to set up sending email using gmail-2FA.pdf (found in 2FAGuide folder)
+            #send_mail(subject, message, settings.EMAIL_HOST_USER, [user.email])
 
             Profile.objects.create(user=user) 
             form.save() # And then, saving to the user db in http://127.0.0.1:8000/admin/auth/user/ for example if running locally
